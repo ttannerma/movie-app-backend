@@ -1,0 +1,23 @@
+{
+  "name": "movie-app-backend",
+  "version": "1.0.0",
+  "description": "Backend for movie app.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ttannerma/movie-app-backend.git"
+  },
+  "keywords": [
+    "nodeJS",
+    "typescript"
+  ],
+  "author": "Teemu Tannerma",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ttannerma/movie-app-backend/issues"
+  },
+  "homepage": "https://github.com/ttannerma/movie-app-backend#readme"
+}
