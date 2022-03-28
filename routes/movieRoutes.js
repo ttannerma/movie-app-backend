@@ -1,10 +1,8 @@
 const express = require("express");
 const movieRoutes = express.Router();
-const { getAllMovies } = require("../utils/databaseUtils");
+const { getAllMovies, addSingleMovie } = require("../utils/databaseUtils");
 
-movieRoutes.get("/movies", (req, res) => {
-  const movies = getAllMovies();
-  res.send(movies);
-});
+movieRoutes.get("/movies", getAllMovies);
+movieRoutes.post("/movie", addSingleMovie);
 
 module.exports = movieRoutes;
