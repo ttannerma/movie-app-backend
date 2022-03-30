@@ -32,8 +32,6 @@ const addSingleMovie = (req, res) => {
   }
 };
 
-const deleteSingleMovie = () => {};
-
 module.exports = {
   getAllMovies,
   addSingleMovie,
