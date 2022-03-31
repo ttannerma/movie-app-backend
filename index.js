@@ -10,8 +10,9 @@ dotenv.config();
 
 // Initialize app
 const app = express();
+
+// Extract body portion of incoming requests and expose it to req.body
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cors());
 app.use(routes);
 

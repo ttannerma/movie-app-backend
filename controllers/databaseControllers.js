@@ -6,8 +6,8 @@ const getAllMovies = (req, res) => {
     fs.readFile(databasePath, (err, moviesBuffer) => {
       res.send(JSON.parse(moviesBuffer));
     });
-  } catch {
-    res.status(500).send("Error while getting all movies");
+  } catch (err) {
+    res.status(500).send(err);
   }
 };
 
@@ -24,11 +24,12 @@ const addSingleMovie = (req, res) => {
       const stringifiedData = JSON.stringify(updatedMovies);
       // Write updated movies to file
       fs.writeFile(databasePath, stringifiedData, () => {
-        res.status(200).send("Succesfully added movie");
+        // Send 200 response
+        res.status(200).send({});
       });
     });
-  } catch {
-    res.status(500).send("Error while adding movie");
+  } catch (err) {
+    res.status(500).send(err);
   }
 };
 
